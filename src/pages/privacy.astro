@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Privacy Policy | My-Fi";
+const description = "Learn how My-Fi protects your personal and financial information. Your privacy is our priority.";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl="/privacy">
+  <section class="legal-page">
+    <div class="container">
+      <div class="legal-header">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: January 2025</p>
+      </div>
+
+      <div class="legal-content">
+        <section class="legal-section">
+          <h2>Introduction</h2>
+          <p>At My-Fi ("we," "our," or "us"), we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered personal finance advisory service.</p>
+          <p>Please read this privacy policy carefully. By using My-Fi, you agree to the collection and use of information in accordance with this policy.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Information We Collect</h2>
+          <h3>Information You Provide</h3>
+          <p>When you use My-Fi, we may collect the following types of information:</p>
+          <ul>
+            <li><strong>Account Information:</strong> Name, email address, and password when you create an account</li>
+            <li><strong>Financial Information:</strong> Income details, expense categories, financial goals, investment preferences, and other information you provide through our onboarding questionnaire</li>
+            <li><strong>Communication Data:</strong> Information from your interactions with our AI advisor and any support requests</li>
+          </ul>
+
+          <h3>Information Collected Automatically</h3>
+          <ul>
+            <li><strong>Usage Data:</strong> How you interact with our service, features you use, and time spent on the platform</li>
+            <li><strong>Device Information:</strong> Browser type, operating system, and device identifiers</li>
+            <li><strong>Log Data:</strong> IP address, access times, and pages viewed</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide personalized financial advice tailored to your situation</li>
+            <li>Improve and optimize our AI recommendations</li>
+            <li>Communicate with you about your account and our services</li>
+            <li>Ensure the security of our platform</li>
+            <li>Comply with legal obligations</li>
+            <li>Conduct research and analysis to improve our services</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>Data Security</h2>
+          <p>We implement industry-standard security measures to protect your personal and financial information, including:</p>
+          <ul>
+            <li>Encryption of data in transit and at rest using AES-256 encryption</li>
+            <li>Secure, authenticated access to your account</li>
+            <li>Regular security audits and vulnerability assessments</li>
+            <li>Limited employee access to personal data on a need-to-know basis</li>
+          </ul>
+          <p>While we strive to protect your information, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Data Sharing and Disclosure</h2>
+          <p>We do not sell your personal information to third parties. We may share your information only in the following circumstances:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> With trusted third-party service providers who assist us in operating our platform (subject to confidentiality agreements)</li>
+            <li><strong>Legal Requirements:</strong> When required by law, regulation, or legal process</li>
+            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+            <li><strong>With Your Consent:</strong> When you explicitly authorize us to share your information</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>Your Rights and Choices</h2>
+          <p>You have the following rights regarding your personal information:</p>
+          <ul>
+            <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+            <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+            <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal retention requirements)</li>
+            <li><strong>Data Portability:</strong> Request your data in a structured, machine-readable format</li>
+            <li><strong>Opt-Out:</strong> Opt out of marketing communications at any time</li>
+          </ul>
+          <p>To exercise any of these rights, please contact us at privacy@my-fi.ca.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Data Retention</h2>
+          <p>We retain your personal information for as long as your account is active or as needed to provide you services. We may retain certain information for longer periods as required by law or for legitimate business purposes.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Children's Privacy</h2>
+          <p>My-Fi is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete it.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Contact Us</h2>
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+          <p>
+            <strong>My-Fi Privacy Team</strong><br>
+            Email: privacy@my-fi.ca
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: calc(72px + var(--spacing-3xl)) 0 var(--spacing-4xl);
+  }
+
+  .legal-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    padding-bottom: var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .legal-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .last-updated {
+    color: var(--color-gray-500);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .legal-section h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .legal-section:first-child h2 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .legal-section h3 {
+    font-size: 1.125rem;
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+  }
+
+  .legal-section p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+  }
+
+  .legal-section ul {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xl);
+  }
+
+  .legal-section li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+    list-style-type: disc;
+    color: var(--color-text-light);
+  }
+
+  .legal-section li strong {
+    color: var(--color-text);
+  }
+</style>

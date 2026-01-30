@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About My-Fi | Our Mission to Make Finance Accessible";
+const description = "Learn about My-Fi's mission to make personalized financial advice accessible and affordable for middle-income Canadians.";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl="/about">
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="badge">About Us</span>
+      <h1>Making Personalized Financial Advice <span class="gradient-text">Accessible to All</span></h1>
+      <p class="hero-subtitle">We believe every Canadian deserves financial guidance that understands their unique situation, not just the wealthy few.</p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-content">
+          <h2>Our <span class="text-primary">Mission</span></h2>
+          <p class="lead">To democratize personalized financial advice for middle-income Canadians.</p>
+          <p>For too long, quality financial guidance has been reserved for those who can afford expensive advisors. Generic tips and one-size-fits-all advice don't account for your unique income, expenses, goals, and life circumstances.</p>
+          <p>My-Fi changes that. By leveraging the power of AI, we deliver hyper-personalized financial guidance that's tailored specifically to YOUR situation&mdash;at a price that makes sense for everyday Canadians.</p>
+        </div>
+        <div class="mission-visual">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Personalization First</h3>
+            <p>Your advice is based on YOUR life, not generic assumptions.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon green">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Privacy Protected</h3>
+            <p>Your data stays yours. Always.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why We Built My-Fi Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why We Built <span class="text-primary">My-Fi</span></h2>
+      </div>
+
+      <div class="story-content">
+        <div class="story-block">
+          <h3>The Problem We Saw</h3>
+          <p>Walk into most financial advice scenarios and you'll find two extremes: expensive human advisors who cater primarily to the wealthy, or generic robo-advisors that treat everyone the same regardless of their circumstances.</p>
+          <p>Middle-income Canadians&mdash;the backbone of our economy&mdash;were left with limited options. Drowning in generic tips about "saving 20% of your income" or "maxing out your RRSP" that didn't account for their real-life situations.</p>
+        </div>
+
+        <div class="story-block">
+          <h3>The Solution We Created</h3>
+          <p>My-Fi uses advanced AI to understand your complete financial picture: your income, expenses, debts, goals, risk tolerance, life stage, and more. Then it delivers advice that's actually relevant to YOU.</p>
+          <p>Whether you're a young professional trying to balance student debt with saving for a home, a parent juggling childcare costs with retirement planning, or anyone in between&mdash;My-Fi adapts to your reality.</p>
+        </div>
+
+        <div class="story-block">
+          <h3>Built for Canada</h3>
+          <p>We're not an American company with a Canadian skin. My-Fi was built from the ground up for Canadians. We understand TFSA contribution limits, RRSP deduction strategies, the new FHSA, provincial tax differences, and all the nuances that make Canadian personal finance unique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our <span class="text-primary">Values</span></h2>
+        <p>The principles that guide everything we do.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="value-item">
+          <div class="value-number">01</div>
+          <h3>Accessibility</h3>
+          <p>Quality financial guidance should be available to everyone, not just the wealthy.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-number">02</div>
+          <h3>Personalization</h3>
+          <p>Generic advice helps no one. Every recommendation should be tailored to the individual.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-number">03</div>
+          <h3>Privacy</h3>
+          <p>Your financial data is sensitive. We protect it fiercely and never sell it.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-number">04</div>
+          <h3>Clarity</h3>
+          <p>Financial concepts don't have to be complicated. We explain everything in plain language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Experience <span class="gradient-text">Personalized Finance</span>?</h2>
+        <p>Join My-Fi today and discover what financial advice should really feel like.</p>
+        <a href="https://app.my-fi.ca" class="btn btn-white btn-lg">
+          Get Started Free
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding: calc(72px + var(--spacing-4xl)) 0 var(--spacing-3xl);
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
+  }
+
+  .about-hero .badge {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about-hero h1 {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .mission-grid {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+
+  .mission-content h2 {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mission-content .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mission-content p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mission-visual {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .value-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-base);
+  }
+
+  .value-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .value-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .value-icon.green {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  }
+
+  .value-card h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .value-card p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+
+  .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .story-block {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .story-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .story-block h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .story-block p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .value-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+
+  .value-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .value-item h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .value-item p {
+    font-size: 0.9375rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cta-content .gradient-text {
+    background: linear-gradient(135deg, #FDE68A, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xl);
+  }
+</style>

@@ -1,0 +1,1727 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "My-Fi | AI-Powered Personal Finance for Canadians";
+const description = "Get hyper-personalized financial advice tailored to your unique situation. My-Fi helps middle-income Canadians master budgeting, saving, investing, and Canadian tax optimization.";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl="/">
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Animated background elements -->
+    <div class="hero-bg-elements">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-pattern"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge animate-fade-in">
+          <span class="badge-dot"></span>
+          Built for Canadians
+        </span>
+        <h1 class="animate-fade-in" style="animation-delay: 0.1s">
+          Financial Advice Tailored to <span class="gradient-text">YOUR</span> Life
+        </h1>
+        <p class="hero-subtitle animate-fade-in" style="animation-delay: 0.2s">
+          Stop following generic tips that don't fit your situation. My-Fi understands your unique financial picture and delivers personalized guidance on budgeting, saving, investing, and Canadian tax optimization.
+        </p>
+        <div class="hero-cta animate-fade-in" style="animation-delay: 0.3s">
+          <a href="https://app.my-fi.ca" class="btn btn-primary btn-lg">
+            Get Your Personalized Advice
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats animate-fade-in" style="animation-delay: 0.4s">
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Canadians Helped</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">$2.5M+</span>
+            <span class="stat-label">Tax Savings Found</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">4.9/5</span>
+            <span class="stat-label">User Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-wrapper">
+          <!-- Main dashboard card -->
+          <div class="dashboard-card animate-float">
+            <div class="dashboard-header">
+              <span class="dashboard-title">Your Financial Overview</span>
+              <span class="dashboard-badge">Live</span>
+            </div>
+            <div class="dashboard-chart">
+              <svg viewBox="0 0 200 80" class="chart-svg">
+                <defs>
+                  <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0" />
+                  </linearGradient>
+                </defs>
+                <path d="M0 60 Q 30 50, 50 45 T 100 35 T 150 25 T 200 15 L 200 80 L 0 80 Z" fill="url(#chartGradient)"/>
+                <path d="M0 60 Q 30 50, 50 45 T 100 35 T 150 25 T 200 15" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="200" cy="15" r="5" fill="#7C3AED"/>
+              </svg>
+            </div>
+            <div class="dashboard-stats">
+              <div class="mini-stat">
+                <span class="mini-stat-label">Net Worth</span>
+                <span class="mini-stat-value">$84,250</span>
+                <span class="mini-stat-change positive">+12.4%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating cards -->
+          <div class="floating-card card-savings animate-float" style="animation-delay: 0.5s">
+            <div class="floating-card-icon green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="floating-card-content">
+              <span class="floating-card-label">TFSA Balance</span>
+              <span class="floating-card-value">$42,500</span>
+            </div>
+          </div>
+
+          <div class="floating-card card-growth animate-float-reverse" style="animation-delay: 0.8s">
+            <div class="floating-card-icon purple">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div class="floating-card-content">
+              <span class="floating-card-label">This Month</span>
+              <span class="floating-card-value text-secondary">+$1,240</span>
+            </div>
+          </div>
+
+          <div class="floating-card card-tax animate-float" style="animation-delay: 1.1s">
+            <div class="floating-card-icon yellow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <div class="floating-card-content">
+              <span class="floating-card-label">Tax Saved</span>
+              <span class="floating-card-value text-primary">$3,840</span>
+            </div>
+          </div>
+
+          <!-- AI Chat bubble -->
+          <div class="ai-bubble animate-fade-in" style="animation-delay: 1.3s">
+            <div class="ai-avatar">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+                <path d="M7 20.662V19c0-2.21 2.239-4 5-4s5 1.79 5 4v1.662"></path>
+              </svg>
+            </div>
+            <div class="ai-message">
+              <span>"Based on your income, you could save $340/month by maxing your RRSP first!"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="container">
+      <div class="trust-bar animate-fade-in" style="animation-delay: 0.5s">
+        <div class="trust-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span>Free to Start</span>
+        </div>
+        <div class="trust-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Your Data Stays Private</span>
+        </div>
+        <div class="trust-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Bank-Level Security</span>
+        </div>
+        <div class="trust-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6l1.5 3.5L17 10l-2.5 2.5.5 4L12 15l-3 1.5.5-4L7 10l3.5-.5L12 6z" fill="#10B981"></path>
+          </svg>
+          <span>Made in Canada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge">Why Choose My-Fi?</span>
+        <h2>Financial Guidance That <span class="gradient-text">Actually Works</span></h2>
+        <p>No more one-size-fits-all advice. My-Fi learns about YOUR situation and delivers recommendations that make sense for you.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card card">
+          <div class="feature-number">01</div>
+          <div class="icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Hyper-Personalized</h3>
+          <p>Through a smart onboarding questionnaire, My-Fi learns about your income, expenses, goals, and life situation to give advice that's truly relevant to you.</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-number">02</div>
+          <div class="icon-box icon-box-green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Canadian Tax Expert</h3>
+          <p>Maximize your TFSA, RRSP, FHSA, and other Canadian tax benefits. My-Fi knows the Canadian tax system inside and out.</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-number">03</div>
+          <div class="icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+          <h3>No Jargon</h3>
+          <p>We explain complex financial concepts in plain language. You don't need a finance degree to understand your own money.</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-number">04</div>
+          <div class="icon-box icon-box-green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Privacy First</h3>
+          <p>Your financial data stays yours. We use bank-level encryption and never sell your information to third parties.</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-number">05</div>
+          <div class="icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Affordable</h3>
+          <p>Get the quality of advice that used to cost hundreds per hour with a financial advisor, at a fraction of the price.</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-number">06</div>
+          <div class="icon-box icon-box-green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Always Available</h3>
+          <p>Available 24/7, whenever you have a financial question or decision to make. No appointments, no waiting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge">Simple Process</span>
+        <h2>Start Your Journey in <span class="gradient-text">3 Easy Steps</span></h2>
+        <p>Getting personalized financial guidance has never been easier.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-line"></div>
+
+        <div class="step-card">
+          <div class="step-icon">
+            <span class="step-number">1</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Tell Us About You</h3>
+            <p>Complete a quick questionnaire about your income, expenses, financial goals, and life situation. Takes just 5 minutes.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon green">
+            <span class="step-number">2</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+              <path d="M12 16v-4"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Get Your Plan</h3>
+            <p>My-Fi's AI analyzes your unique situation and creates tailored recommendations for budgeting, saving, investing, and tax optimization.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">
+            <span class="step-number">3</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Take Action</h3>
+            <p>Follow your personalized guidance, ask questions anytime, and watch your financial health improve. My-Fi adapts as your life changes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-3xl)">
+        <a href="https://app.my-fi.ca" class="btn btn-primary btn-lg">
+          Start Your Financial Journey
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for Canadians Section -->
+  <section class="section canadian-section-wrapper">
+    <div class="container">
+      <div class="canadian-grid">
+        <div class="canadian-content">
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Proudly Canadian
+          </span>
+          <h2>Built for <span class="gradient-text">Middle-Income Canadians</span></h2>
+          <p class="lead">Most financial advice is written for Americans or the ultra-wealthy. My-Fi is different.</p>
+
+          <div class="canadian-features">
+            <div class="canadian-feature">
+              <div class="feature-check">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>TFSA Optimization</strong>
+                <span>Maximize your tax-free growth potential</span>
+              </div>
+            </div>
+            <div class="canadian-feature">
+              <div class="feature-check">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>RRSP Strategies</strong>
+                <span>Build retirement wealth while reducing taxes</span>
+              </div>
+            </div>
+            <div class="canadian-feature">
+              <div class="feature-check">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>FHSA Guidance</strong>
+                <span>First-time homebuyer savings strategies</span>
+              </div>
+            </div>
+            <div class="canadian-feature">
+              <div class="feature-check">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Canadian Tax Benefits</strong>
+                <span>Never miss a deduction or credit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="canadian-visual">
+          <div class="accounts-stack">
+            <div class="account-card-large tfsa">
+              <div class="account-card-header">
+                <div class="account-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="account-details">
+                  <span class="account-type">TFSA</span>
+                  <span class="account-desc">Tax-Free Savings</span>
+                </div>
+              </div>
+              <div class="account-balance">$42,500</div>
+              <div class="account-growth">
+                <span class="growth-badge positive">+$3,200 this year</span>
+                <span class="growth-label">Tax-free growth</span>
+              </div>
+              <div class="account-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 62%"></div>
+                </div>
+                <span class="progress-label">62% of contribution room used</span>
+              </div>
+            </div>
+
+            <div class="account-card-small rrsp">
+              <div class="small-account-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="small-account-info">
+                <span class="small-account-name">RRSP</span>
+                <span class="small-account-value">$28,750</span>
+              </div>
+              <span class="small-account-badge">$5,750 tax refund</span>
+            </div>
+
+            <div class="account-card-small fhsa">
+              <div class="small-account-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <div class="small-account-info">
+                <span class="small-account-name">FHSA</span>
+                <span class="small-account-value">$8,000</span>
+              </div>
+              <span class="small-account-badge new">New!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge">Success Stories</span>
+        <h2>Loved by <span class="gradient-text">Canadians</span> Like You</h2>
+        <p>Real feedback from real people who took control of their finances.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBF24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"I finally understand where my money goes each month. My-Fi helped me find <strong>$400 I was wasting</strong> and put it toward my emergency fund."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar gradient-avatar">SK</div>
+            <div class="author-info">
+              <strong>Sarah K.</strong>
+              <span>Toronto, ON</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured">
+          <div class="testimonial-badge">Featured</div>
+          <div class="testimonial-rating">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBF24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"The RRSP vs TFSA advice was exactly what I needed. I was contributing to the wrong account for my situation. <strong>My-Fi showed me the optimal strategy</strong> and I'm now saving thousands in taxes."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar gradient-avatar">MR</div>
+            <div class="author-info">
+              <strong>Michael R.</strong>
+              <span>Calgary, AB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBF24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="testimonial-text">"As a first-time homebuyer, the FHSA guidance was invaluable. My-Fi helped me create <strong>a realistic savings plan</strong> that actually works with my budget."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar gradient-avatar">JL</div>
+            <div class="author-info">
+              <strong>Jennifer L.</strong>
+              <span>Vancouver, BC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="badge">Got Questions?</span>
+        <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-column">
+          <details class="faq-item" open>
+            <summary>
+              <span>What makes My-Fi different from other financial apps?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>My-Fi provides hyper-personalized advice based on YOUR specific financial situation, not generic tips. Through our onboarding questionnaire, we learn about your income, expenses, goals, and life circumstances to deliver guidance that's truly relevant to you as a Canadian.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Is my financial information secure?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>Absolutely. We use bank-level encryption to protect your data, and we never sell your information to third parties. Your privacy is our priority, and you remain in control of your data at all times.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Do I need to know about finance to use My-Fi?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>Not at all! My-Fi is designed to be accessible to everyone, regardless of financial knowledge. We explain complex concepts in plain language and guide you step-by-step through your financial journey.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-column">
+          <details class="faq-item">
+            <summary>
+              <span>How does My-Fi help with Canadian taxes?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>My-Fi understands Canadian tax regulations and registered accounts like TFSA, RRSP, and FHSA. We help you optimize contributions, identify tax deductions and credits you might be missing, and create strategies to minimize your tax burden legally.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Is My-Fi free to use?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>My-Fi offers a free tier to get you started with basic financial guidance. For more advanced features and in-depth personalization, we offer affordable premium plans that cost a fraction of traditional financial advisor fees.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can My-Fi replace a financial advisor?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>My-Fi provides educational financial information and personalized guidance for everyday financial decisions. For complex situations like estate planning, we recommend consulting with a licensed professional. My-Fi can help you prepare for those conversations.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-blob cta-blob-1"></div>
+      <div class="cta-blob cta-blob-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <span class="cta-badge">Ready to Start?</span>
+        <h2>Take Control of Your <span class="cta-gradient">Financial Future</span></h2>
+        <p>Join thousands of Canadians who are making smarter financial decisions with personalized guidance from My-Fi.</p>
+        <div class="cta-buttons">
+          <a href="https://app.my-fi.ca" class="btn btn-white btn-lg">
+            Get Your Personalized Advice
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <p class="cta-note">Free to start. No credit card required.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    padding: calc(72px + var(--spacing-3xl)) 0 var(--spacing-2xl);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-bg-elements {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .blob-1 {
+    width: 600px;
+    height: 600px;
+    background: rgba(124, 58, 237, 0.15);
+    top: -200px;
+    right: -100px;
+    animation: blob 15s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(16, 185, 129, 0.12);
+    bottom: -100px;
+    left: -100px;
+    animation: blob 12s ease-in-out infinite reverse;
+  }
+
+  .blob-3 {
+    width: 300px;
+    height: 300px;
+    background: rgba(245, 158, 11, 0.1);
+    top: 50%;
+    left: 30%;
+    animation: blob 18s ease-in-out infinite;
+  }
+
+  .grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr 1.1fr;
+      gap: var(--spacing-4xl);
+    }
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-content {
+      text-align: left;
+    }
+  }
+
+  .hero-content .badge {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+
+  .hero-content h1 {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-subtitle {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-cta {
+      justify-content: flex-start;
+    }
+  }
+
+  /* Hero Stats */
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-stats {
+      justify-content: flex-start;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .stat-item {
+      text-align: left;
+    }
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-gray-200);
+  }
+
+  /* Hero Visual */
+  .hero-visual {
+    display: none;
+    position: relative;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-visual {
+      display: block;
+    }
+  }
+
+  .hero-visual-wrapper {
+    position: relative;
+    height: 500px;
+  }
+
+  /* Dashboard Card */
+  .dashboard-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .dashboard-title {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .dashboard-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .dashboard-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .dashboard-chart {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .chart-svg {
+    width: 100%;
+    height: 80px;
+  }
+
+  .dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mini-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mini-stat-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+
+  .mini-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .mini-stat-change {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .mini-stat-change.positive {
+    color: var(--color-secondary);
+  }
+
+  /* Floating Cards */
+  .floating-card {
+    position: absolute;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 1px solid rgba(124, 58, 237, 0.05);
+  }
+
+  .floating-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .floating-card-icon.green {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-secondary);
+  }
+
+  .floating-card-icon.purple {
+    background: rgba(124, 58, 237, 0.1);
+    color: var(--color-primary);
+  }
+
+  .floating-card-icon.yellow {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--color-accent);
+  }
+
+  .floating-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .floating-card-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+
+  .floating-card-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .card-savings {
+    top: 60px;
+    left: 0;
+  }
+
+  .card-growth {
+    top: 30%;
+    right: -20px;
+  }
+
+  .card-tax {
+    bottom: 80px;
+    left: 20px;
+  }
+
+  /* AI Bubble */
+  .ai-bubble {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    border-bottom-right-radius: var(--radius-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: 280px;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .ai-avatar {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .ai-message {
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  /* Trust Bar */
+  .trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-2xl) 0;
+    margin-top: var(--spacing-2xl);
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-gray-600);
+  }
+
+  /* Animate fade in */
+  .animate-fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-xl);
+  }
+
+  @media (min-width: 640px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .feature-card {
+    position: relative;
+  }
+
+  .feature-number {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-gray-100);
+    line-height: 1;
+  }
+
+  .feature-card h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .feature-card p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  /* Steps Section */
+  .steps-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .steps-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .steps-line {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .steps-line {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 15%;
+      right: 15%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      z-index: 0;
+    }
+  }
+
+  .step-card {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-xl);
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
+    position: relative;
+  }
+
+  .step-icon.green {
+    background: var(--gradient-secondary);
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+  }
+
+  .step-number {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    background: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .step-content h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .step-content p {
+    font-size: 0.9375rem;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Canadian Section */
+  .canadian-section-wrapper {
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+  }
+
+  .canadian-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .canadian-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .canadian-content h2 {
+    margin: var(--spacing-lg) 0;
+  }
+
+  .canadian-content .lead {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .canadian-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .canadian-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .feature-check {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .canadian-feature div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .canadian-feature strong {
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+
+  .canadian-feature span {
+    color: var(--color-gray-500);
+    font-size: 0.875rem;
+  }
+
+  /* Accounts Stack */
+  .accounts-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .account-card-large {
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .account-card-large.tfsa {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, var(--color-white) 100%);
+  }
+
+  .account-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .account-icon-wrap {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .account-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-type {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+  }
+
+  .account-desc {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .account-balance {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .account-growth {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .growth-badge {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+  }
+
+  .growth-badge.positive {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-secondary);
+  }
+
+  .growth-label {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .account-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--gradient-secondary);
+    border-radius: var(--radius-full);
+  }
+
+  .progress-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+
+  .account-card-small {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: all var(--transition-base);
+  }
+
+  .account-card-small:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .small-account-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .account-card-small.rrsp .small-account-icon {
+    background: rgba(124, 58, 237, 0.1);
+    color: var(--color-primary);
+  }
+
+  .account-card-small.fhsa .small-account-icon {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--color-accent);
+  }
+
+  .small-account-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .small-account-name {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .small-account-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .small-account-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(124, 58, 237, 0.1);
+    color: var(--color-primary);
+  }
+
+  .small-account-badge.new {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--color-accent);
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+  }
+
+  .testimonial-card {
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all var(--transition-base);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-2xl);
+  }
+
+  .testimonial-card.featured {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.03), rgba(16, 185, 129, 0.03));
+    border: 2px solid rgba(124, 58, 237, 0.1);
+  }
+
+  .testimonial-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: var(--radius-full);
+  }
+
+  .testimonial-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    flex: 1;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .testimonial-text strong {
+    color: var(--color-primary);
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .gradient-avatar {
+    background: var(--gradient-primary);
+    color: white;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-info strong {
+    color: var(--color-text);
+  }
+
+  .author-info span {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  /* FAQ */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .faq-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-text);
+    list-style: none;
+    gap: var(--spacing-md);
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary span {
+    flex: 1;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+    color: var(--color-gray-500);
+  }
+
+  .faq-item[open] .faq-icon {
+    background: var(--gradient-primary);
+    color: white;
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 var(--spacing-xl) var(--spacing-xl);
+  }
+
+  .faq-answer p {
+    line-height: 1.8;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    position: relative;
+    background: var(--gradient-primary);
+    padding: var(--spacing-5xl) 0;
+    overflow: hidden;
+  }
+
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .cta-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+  }
+
+  .cta-blob-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -200px;
+    right: -100px;
+  }
+
+  .cta-blob-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(16, 185, 129, 0.2);
+    bottom: -150px;
+    left: -100px;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .cta-content h2 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cta-gradient {
+    background: linear-gradient(135deg, #FDE68A, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-content > p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cta-note {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+</style>
+
+<script>
+  // Scroll reveal animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

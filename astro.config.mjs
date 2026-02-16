@@ -5,5 +5,8 @@ export default defineConfig({
   build: {
     assets: 'assets'
   },
-  compressHTML: true
+  compressHTML: true,
+  devToolbar: {
+    enabled: false
+  }
 });

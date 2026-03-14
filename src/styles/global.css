@@ -323,6 +323,16 @@ ul, ol {
   .hide-mobile {
     display: none !important;
   }
+  /* Reduce slide animations on mobile to prevent horizontal overflow */
+  .scroll-slide-left {
+    transform: translateX(-20px);
+  }
+  .scroll-slide-right {
+    transform: translateX(20px);
+  }
+  .scroll-fade-up {
+    transform: translateY(24px);
+  }
 }
 
 @media (min-width: 769px) {

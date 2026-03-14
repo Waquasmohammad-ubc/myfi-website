@@ -14,7 +14,7 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 <body>
   <div class="page-bg">
@@ -153,9 +153,9 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
     </div>
   </div>
 
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script is:inline>
     // ── EmailJS Config ──
-    // Replace these with your actual EmailJS credentials
     const EMAILJS_PUBLIC_KEY = 'OvRhVy-J_Pn2FWabj';
     const EMAILJS_SERVICE_ID = 'service_b5fzj8n';
     const EMAILJS_TEMPLATE_ID = 'template_am7bo9t';
@@ -169,33 +169,48 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
 
     function createMsgAvatar() {
       const avatar = document.createElement('div');
-      avatar.className = 'msg-avatar';
+      Object.assign(avatar.style, {
+        width: '32px', height: '32px', borderRadius: '50%',
+        background: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)',
+        color: '#9333ea', display: 'flex', alignItems: 'center',
+        justifyContent: 'center', flexShrink: '0'
+      });
       avatar.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
       return avatar;
     }
 
-    function addMessage(text, type, isCard) {
+    function addMessage(text, type) {
       const msg = document.createElement('div');
-      msg.className = `msg msg-${type}`;
-      msg.style.opacity = '0';
-      msg.style.transform = 'translateY(12px)';
+      Object.assign(msg.style, {
+        display: 'flex', gap: '0.625rem', alignItems: 'flex-end',
+        justifyContent: type === 'bot' ? 'flex-start' : 'flex-end',
+        opacity: '0', transform: 'translateY(12px)'
+      });
 
       if (type === 'bot') {
         msg.appendChild(createMsgAvatar());
       }
 
-      if (isCard) {
-        const card = document.createElement('div');
-        card.className = 'success-card';
-        card.innerHTML = text;
-        msg.appendChild(card);
+      const bubble = document.createElement('div');
+      bubble.textContent = text;
+      Object.assign(bubble.style, {
+        maxWidth: '65%', padding: '0.75rem 1rem', borderRadius: '16px',
+        fontSize: '0.9rem', lineHeight: '1.55'
+      });
+
+      if (type === 'bot') {
+        Object.assign(bubble.style, {
+          background: '#f5f5f5', color: '#262626',
+          borderBottomLeftRadius: '4px'
+        });
       } else {
-        const bubble = document.createElement('div');
-        bubble.className = `msg-bubble ${type === 'bot' ? 'bot-bubble' : 'user-bubble'}`;
-        bubble.textContent = text;
-        msg.appendChild(bubble);
+        Object.assign(bubble.style, {
+          background: 'linear-gradient(135deg, #9333ea, #7c3aed)', color: '#ffffff',
+          borderBottomRightRadius: '4px'
+        });
       }
 
+      msg.appendChild(bubble);
       chatBody.appendChild(msg);
 
       requestAnimationFrame(() => {
@@ -209,16 +224,29 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
 
     function addTypingIndicator() {
       const typing = document.createElement('div');
-      typing.className = 'msg msg-bot';
       typing.id = 'typingIndicator';
-      typing.style.opacity = '0';
-      typing.style.transform = 'translateY(12px)';
+      Object.assign(typing.style, {
+        display: 'flex', gap: '0.625rem', alignItems: 'flex-end',
+        justifyContent: 'flex-start', opacity: '0', transform: 'translateY(12px)'
+      });
 
       typing.appendChild(createMsgAvatar());
 
       const dots = document.createElement('div');
-      dots.className = 'typing-dots';
-      dots.innerHTML = '<span></span><span></span><span></span>';
+      Object.assign(dots.style, {
+        display: 'flex', gap: '5px', padding: '0.75rem 1rem',
+        background: '#f5f5f5', borderRadius: '16px',
+        borderBottomLeftRadius: '4px'
+      });
+      for (let i = 0; i < 3; i++) {
+        const span = document.createElement('span');
+        Object.assign(span.style, {
+          width: '7px', height: '7px', background: '#a3a3a3',
+          borderRadius: '50%', animation: 'typingBounce 1.4s ease-in-out infinite',
+          animationDelay: (i * 0.2) + 's'
+        });
+        dots.appendChild(span);
+      }
       typing.appendChild(dots);
 
       chatBody.appendChild(typing);
@@ -267,11 +295,9 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
 
         setTimeout(() => {
           removeTypingIndicator();
-          addMessage(
-            '<div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="sc-title">You\'re on the list!</div><div class="sc-desc">We\'ll send you an email at <strong>' + email + '</strong> as soon as MyFi launches. Stay tuned!</div>',
-            'bot',
-            true
-          );
+          addMessage("You're in! We'll notify you the moment MyFi launches. Stay tuned! 🚀", 'bot');
+          // Hide input area after success
+          form.style.display = 'none';
         }, 1500);
       } catch (err) {
         setTimeout(() => {
@@ -817,74 +843,6 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
       30% { opacity: 1; transform: translateY(-5px); }
     }
 
-    /* Success Card */
-    .success-card {
-      background: linear-gradient(135deg, var(--purple-50), var(--green-100));
-      border: 1px solid var(--green-200);
-      border-radius: 16px;
-      padding: 1.25rem 1.5rem;
-      max-width: 65%;
-    }
-
-    @media (max-width: 600px) {
-      .success-card {
-        max-width: 88%;
-        padding: 1rem 1.125rem;
-        border-radius: 14px;
-      }
-    }
-
-    .sc-icon {
-      width: 44px; height: 44px;
-      background: var(--green-500);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-      animation: successPop 0.5s ease;
-    }
-
-    @media (max-width: 600px) {
-      .sc-icon {
-        width: 38px; height: 38px;
-        margin-bottom: 0.625rem;
-      }
-      .sc-icon svg { width: 20px; height: 20px; }
-    }
-
-    @keyframes successPop {
-      0% { transform: scale(0); }
-      70% { transform: scale(1.15); }
-      100% { transform: scale(1); }
-    }
-
-    .sc-title {
-      font-size: 1.0625rem;
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: 0.25rem;
-    }
-
-    @media (max-width: 600px) {
-      .sc-title { font-size: 0.9375rem; }
-    }
-
-    .sc-desc {
-      font-size: 0.8125rem;
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      .sc-desc { font-size: 0.75rem; }
-    }
-
-    .sc-desc strong {
-      color: var(--purple-600);
-    }
-
     /* Chat Input */
     .chat-input {
       display: flex;
@@ -992,5 +950,6 @@ const description = "MyFi is launching soon. Your AI-powered personal finance as
       .page { min-height: 100dvh; }
     }
   </style>
+
 </body>
 </html>
